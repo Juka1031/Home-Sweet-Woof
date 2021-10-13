@@ -40,3 +40,23 @@ If they see any dogs they like, they may make appointments or live chat with the
 ### Full CRUD for Dogs/Users
 * Shelters can create/edit/delete dog listings and users can freely edit their profile
 ![HOW - adopter profile](https://user-images.githubusercontent.com/82779931/134609900-39986994-ee23-4879-a698-d2b388d9d414.JPG)
+
+### Code
+
+```...javascript
+  if (this.props.user._id === this.props.currentUser.id) {
+    editNumber = (
+      <button id="add-phone-number-btn" onClick={this.editNumber}>
+        +
+      </button>
+    );
+
+    editDescription = (
+      <button id="user-description-edit-btn" onClick={this.editDescription}>
+        ✎ Edit
+      </button>
+    );
+  }
+```
+
+As one of the key features of the website is the conditional rendering of what is displayed based upon the user's priviledge. One of the common themes throughout the code is what is and what is not displayed based upon the type of user logged in.

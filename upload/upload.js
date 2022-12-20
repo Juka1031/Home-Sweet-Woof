@@ -5,8 +5,8 @@ const access = require('../config/keys');
 const multerS3 = require('multer-s3')
 const path = require('path')
 const s3 = new AWS.S3({
-    accessKeyId: access.AWS.accessKeyId,
-    secretAccessKey: access.AWS.secretAccessKey,
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   });
 
 // aws.config.update({

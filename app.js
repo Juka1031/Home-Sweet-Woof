@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 mongoose
-  .connect(db, { useNewUrlParser: true })
+  .connect(process.env.MONGO_UR, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch((err) => console.log(err));
 
